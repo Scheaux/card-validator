@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.credit_card {
+  width: 60px;
+}
+
+#card-input {
+  padding: 10px;
+  border: 1px solid gray;
+  border-radius: 5px;
+}
+
+#validate {
+  background-color: rgb(27, 136, 27);
+  color: #fff;
+  border-radius: 5px;
+  padding: 11px;
+  border: none;
+}
+
+#validate:hover {
+  outline: 1px solid black;
+}
+
+.gray {
+  filter: grayscale(1);
+}
