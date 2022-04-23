@@ -27,7 +27,7 @@ const cardArray = [
     'discover',
   ],
   [
-    2333333333333333,
+    2200000000007389,
     true,
     'mir',
   ],
