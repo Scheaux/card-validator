@@ -21,21 +21,18 @@ export default class App {
   }
 
   static validateCard(num) {
-    let oddSum = 0;
-    let evenSum = 0;
-    const numToString = num.toString().split('');
-    for (let i = 0; i < numToString.length; i += 1) {
+    const string = num.toString().split('');
+    const last = string[string.length - 1];
+    string.splice(string.length - 1, 1);
+    let sum = 0;
+    for (let i = string.length - 1; i >= 0; i -= 1) {
       if (i % 2 === 0) {
-        if (numToString[i] * 2 >= 10) {
-          evenSum += ((numToString[i] * 2) - 9);
-        } else {
-          evenSum += numToString[i] * 2;
-        }
-      } else {
-        oddSum += parseInt(numToString[i], 10);
+        string[i] *= 2;
+        if (string[i] > 9) string[i] -= 9;
       }
+      sum += +string[i];
     }
-    return (oddSum + evenSum) % 10 === 0;
+    return (sum + +last) % 10 === 0;
   }
 
   static checkCardOrigin(num) {
